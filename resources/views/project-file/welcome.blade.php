@@ -4,7 +4,7 @@
 
 
 <div class="container">
-    <div class="row">
+    <div class="row random">
         <h1>
             Projects
         </h1>
@@ -12,9 +12,9 @@
 
         @foreach($projects as $project)
         <div class="col-4 my-3">
-            
+
             <div class="card" style="width: 18rem; height:100%">
-                <img src="{{ Vite::asset('resources/img/img.crdownload') }}" class="card-img-top" alt="">
+                <img src="{{ Vite::asset('resources/img/img.crdownload') }}" alt="">
                 <div class="card-body">
                     <h5 class="card-title">nome del progetto:{{ $project -> nome }}</h5>
                     <p class="card-text">{{ $project -> descrizione }}</p>
