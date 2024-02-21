@@ -16,7 +16,7 @@
         @endauth
 
         @foreach($projects as $project)
-        <div class="col-4 my-3 transizione">
+        <div class="col-4 my-3 element" >
 
             <div class="card" style="height:100%">
                 {{-- Link immagine faker che abbiamo preferito non mettere perchè non mostra immagini ma testo --}}
@@ -36,7 +36,7 @@
                         @csrf
                         @method('DELETE')
     
-                        <input class="card-link" type="submit" value="X" id="delete-btn">
+                        <button type="button" class="btn btn-warning my-3">Delete</button>
                     </form>
                 </div>
             </div>

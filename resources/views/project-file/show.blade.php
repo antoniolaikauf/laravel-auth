@@ -19,10 +19,6 @@
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">{{$project -> data_progetto}}</li>
                 </ul>
-                <div class="card-body">
-                    <a href=" {{ route('project.show', $project -> id) }} " class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
-                </div>
             </div>
         </div>
 
