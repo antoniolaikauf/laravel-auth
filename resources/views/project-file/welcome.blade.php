@@ -16,8 +16,7 @@
         @endauth
 
         @foreach($projects as $project)
-        <div class="col-4 my-3 ">
-        <div class="col-4 my-3 element" >
+        <div class="col-4 my-3 element">
 
             <div class="card shadow  mb-5 bg-body rounded" style="height:100%">
                 <!-- {{-- Link immagine faker che abbiamo preferito non mettere perchè non mostra immagini ma testo --}} -->
@@ -31,23 +30,18 @@
                     <li class="list-group-item">{{$project -> data_progetto}}</li>
                 </ul>
                 <div class="card-body">
-                    <button type="button" class="btn btn-info"> 
-                        <a href=" {{ route('project.show', $project -> id) }} " class="card-link">Card link</a> 
+                    <button type="button" class="btn btn-info">
+                        <a href=" {{ route('project.show', $project -> id) }} " class="card-link">Card link</a>
                     </button>
-            
+
                     @auth
-                        <form action=" {{ route('project.destroy', $project -> id) }} " method="POST">
+                    <form action=" {{ route('project.destroy', $project -> id) }} " method="POST">
 
                         @csrf
                         @method('DELETE')
 
-                        <input class="card-link" type="submit" value="X" id="delete-btn">
+                        <button type="submit" class="btn btn-warning my-3">Delete</button>
                     </form>
-                            @csrf
-                            @method('DELETE')
-        
-                            <button type="submit" class="btn btn-warning my-3">Delete</button>
-                        </form>
                     @endauth
                 </div>
             </div>
