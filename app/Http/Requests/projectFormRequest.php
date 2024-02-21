@@ -26,7 +26,7 @@ class projectFormRequest extends FormRequest
         return [
             "nome" => 'required|string|max:20|min:3',
             "descrizione" => 'required|string|max:255|min:10',
-            "data-progetto" => 'required|string',
+            "data_progetto" => 'required',
         ];
     }
 }

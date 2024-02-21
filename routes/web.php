@@ -27,6 +27,8 @@ Route::get('/dashboard', function () {
 Route::middleware('auth')->group(function () {
     // rotta per pagina create e creare un nuovo elemento 
     Route::get('/project/create', [ProjectController::class, 'create'])->name('project.create');
+    // rotta per creazione nuovo progetto
+    Route::post('/project/create', [ProjectController::class, 'store'])->name('project.edit');
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

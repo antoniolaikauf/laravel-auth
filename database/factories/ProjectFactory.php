@@ -19,7 +19,7 @@ class ProjectFactory extends Factory
         return [
             'nome' => fake() -> word(),
             'descrizione' => fake() -> paragraph(),
-            'data-progetto' => fake() -> date(),
+            'data_progetto' => fake() -> date(),
         ];
     }
 }

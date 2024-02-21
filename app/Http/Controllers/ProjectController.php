@@ -38,9 +38,19 @@ class ProjectController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(projectFormRequest $request)
     {
-        //
+        $data = $request->all();
+
+        $project = new Project();
+
+        $project->nome = $data['nome'];
+        $project->descrizione = $data['descrizione'];
+        $project->data_progetto = $data['data_progetto'];
+
+        $project->save();
+
+        return redirect()->route('project.index', compact('project'));
     }
 
     /**

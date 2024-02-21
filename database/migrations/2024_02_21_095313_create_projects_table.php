@@ -18,7 +18,7 @@ return new class extends Migration
 
             $table->string('nome');
             $table->text('descrizione');
-            $table->date('data-progetto');
+            $table->date('data_progetto');
             $table->timestamps();
         });
     }
