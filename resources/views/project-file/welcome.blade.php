@@ -10,14 +10,14 @@
         </h1>
 
         @auth
-          <a href="{{route('project.create')}}">inserisci nuovo progetto</a>
+        <a href="{{route('project.create')}}">inserisci nuovo progetto</a>
         @endauth
 
         @foreach($projects as $project)
         <div class="col-4 my-3">
 
             <div class="card" style="height:100%">
-                <img src="{{ Vite::asset('resources/img/img.crdownload') }}" alt="">
+                <img src="{{ Vite::asset('public/img/img.crdownload') }}" alt="">
                 <div class="card-body">
                     <h5 class="card-title">nome del progetto:{{ $project -> nome }}</h5>
                     <p class="card-text">{{ $project -> descrizione }}</p>
