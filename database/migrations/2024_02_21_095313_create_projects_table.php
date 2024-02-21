@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
 
             $table->string('nome');
+            $table->text('img');
             $table->text('descrizione');
             $table->date('data_progetto');
             $table->timestamps();

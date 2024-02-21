@@ -18,6 +18,7 @@ class ProjectFactory extends Factory
     {
         return [
             'nome' => fake() -> word(),
+            'img' => fake() -> imageUrl(360, 360, 'animals', true, 'dogs', true, 'jpg'),
             'descrizione' => fake() -> paragraph(),
             'data_progetto' => fake() -> date(),
         ];
