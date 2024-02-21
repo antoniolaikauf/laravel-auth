@@ -29,4 +29,15 @@ class projectFormRequest extends FormRequest
             "data_progetto" => 'required',
         ];
     }
+    public function messages()
+    {
+        // errori personalizzati
+        return [
+            'nome.min' => "Il nome non puo' essere minore di 3 caratteri",
+            'nome.required' => "il nome del progetto è richiesto ",
+            'descrizione.required' => "la descrizione del progetto è richiesto ",
+            'descrizione.min' => "la descrizione non puo essere minore di 10 o maggiore di 255",
+            'data_progetto' => " la data del progetto è richiesto ",
+        ];
+    }
 }
