@@ -1,19 +1,21 @@
 @import '~bootstrap/scss/bootstrap';
 
 
-// .element {
-//     // opacity: 1;
-//     // transition: opacity 0.5s ease;
-//     display: none;
-//     animation-name: example;
-//     animation-duration: 4s;
-// }
 
-// @keyframes example {
-//    from{
-//     display: none;
-//    }
-//    to{
-//     display: block;
-//    }
-// }
+
+  // transizione descizione
+.transizione {
+    opacity: 0;
+    animation-name: comparsa;
+    animation-duration: 2s;
+}
+
+
+@keyframes comparsa {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }

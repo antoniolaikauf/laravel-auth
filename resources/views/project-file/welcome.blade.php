@@ -16,7 +16,7 @@
         @endauth
 
         @foreach($projects as $project)
-        <div class="col-4 my-3 element" >
+        <div class="col-4 my-3 transizione">
 
             <div class="card" style="height:100%">
                 <img src="{{ Vite::asset('public/img/img.crdownload') }}" alt="">
