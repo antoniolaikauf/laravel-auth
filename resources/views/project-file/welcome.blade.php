@@ -19,6 +19,8 @@
         <div class="col-4 my-3 element" >
 
             <div class="card" style="height:100%">
+                {{-- Link immagine faker che abbiamo preferito non mettere perchè non mostra immagini ma testo --}}
+                {{-- <img src="{{ asset( $project -> img ) }}" alt=""> --}}
                 <img src="{{ Vite::asset('public/img/img.crdownload') }}" alt="">
                 <div class="card-body">
                     <h5 class="card-title">nome del progetto:{{ $project -> nome }}</h5>
