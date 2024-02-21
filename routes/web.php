@@ -29,6 +29,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/project/create', [ProjectController::class, 'create'])->name('project.create');
     // rotta per creazione nuovo progetto
     Route::post('/project/create', [ProjectController::class, 'store'])->name('project.edit');
+    // rotta per far vedere il progetto cliccato
+    Route::get('/project/{id}', [ ProjectController :: class, 'show']) -> name('project.show');
+    // rotta per cancellare il progetto cliccato
+    Route::delete('/project/{id}', [ ProjectController :: class, 'destroy']) -> name('project.destroy');
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

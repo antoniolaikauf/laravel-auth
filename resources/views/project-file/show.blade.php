@@ -1,20 +1,14 @@
 @extends('layouts.app')
 @section('content')
 
-
-
 <div class="container">
     <div class="row text-center">
         <h1>
             Projects
         </h1>
 
-        @auth
-        <a href="{{route('project.create')}}">inserisci nuovo progetto</a>
-        @endauth
 
-        @foreach($projects as $project)
-        <div class="col-4 my-3">
+        <div class="row text-center my-3">
 
             <div class="card" style="height:100%">
                 <img src="{{ Vite::asset('public/img/img.crdownload') }}" alt="">
@@ -27,19 +21,15 @@
                 </ul>
                 <div class="card-body">
                     <a href=" {{ route('project.show', $project -> id) }} " class="card-link">Card link</a>
-                    <form action=" {{ route('project.destroy', $project -> id) }} " method="POST">
-
-                        @csrf
-                        @method('DELETE')
-    
-                        <input class="card-link" type="submit" value="X" id="delete-btn">
-                    </form>
+                    <a href="#" class="card-link">Another link</a>
                 </div>
             </div>
         </div>
 
-        @endforeach
     </div>
 </div>
 
+
+
+    
 @endsection
