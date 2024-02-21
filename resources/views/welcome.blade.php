@@ -3,6 +3,16 @@
 
 
 <h1>
-    hello world
+   Projects
 </h1>
+
+<ul>
+    @foreach($projects as $project)
+        <li>
+            {{ $project -> nome }}
+        </li>
+    
+    @endforeach
+</ul>
+
 @endsection
